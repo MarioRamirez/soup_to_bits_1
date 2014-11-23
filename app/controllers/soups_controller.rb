@@ -1,6 +1,7 @@
 class SoupsController < ApplicationController
+  before_action :fetch_soup, only: [:show, :edit, :update, :destroy]
+  
   def show
-    @soup = Soup.find(params[:id])
     
     respond_to do |format|
       format.html
@@ -23,5 +24,11 @@ class SoupsController < ApplicationController
   def update
   end
   def destroy
+  end
+  
+  private
+  
+  def :fetch_soup
+    @soup = Soup.find(params[:id])
   end
 end
