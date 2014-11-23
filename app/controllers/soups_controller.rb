@@ -28,7 +28,7 @@ class SoupsController < ApplicationController
   
   private
   
-  def :fetch_soup
+  def fetch_soup
     @soup = Soup.find(params[:id])
   end
 end
