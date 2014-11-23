@@ -1,1 +1,7 @@
 <h1> <%= @soup.name %></h1>
+
+<% if @soup.featured? %>
+  <p>Esta deliciosa sopa está disponible este mes.</p>
+<% else %>
+  <p>Esta sopa no está en temporada.</p>
+<% end %>
