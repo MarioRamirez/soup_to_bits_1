@@ -1,6 +1,6 @@
 <h1> <%= @category.name %></h1>
 
 <ul><% @category.soups.each do |soup| %>
-  <li> <%= soup.name %> </li>
+  <li> <%= link_to soup.name, soup %> </li>
   <% end %>
 </ul> 
